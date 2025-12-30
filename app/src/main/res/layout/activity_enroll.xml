@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enroll Student"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"
+            android:textColor="?attr/colorOnBackground"/>
+
+        <!-- Student ID -->
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/student_id"
+            android:inputType="text"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Student Name -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/student_name"
+            android:inputType="textPersonName"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Course -->
+        <EditText
+            android:id="@+id/etCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/student_course"
+            android:inputType="text"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Age -->
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/student_age"
+            android:inputType="number"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Enroll Button -->
+        <Button
+            android:id="@+id/btnEnroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_student"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary"/>
+    </LinearLayout>
+</ScrollView>

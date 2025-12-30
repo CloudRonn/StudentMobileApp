@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Avarmi Main Campus</string>
+
+    <!-- Student Fields -->
+    <string name="student_id">Student ID</string>
+    <string name="student_name">Student Name</string>
+    <string name="student_course">Course</string>
+    <string name="student_age">Age</string>
+
+    <!-- Buttons -->
+    <string name="add_student">Enroll Student</string>
+    <string name="view_students">View Students</string>
+    <string name="update_student">Update Student Details</string>
+    <string name="delete_student">Delete Student</string>
+
+    <!-- Messages -->
+    <string name="no_student_yet">No student yet</string>
+    <string name="students">Students</string>
+    <string name="info">Info</string>
+    <string name="student_added">Student Added</string>
+    <string name="insert_failed">Insert Failed</string>
+    <string name="student_updated">Student Updated</string>
+    <string name="update_failed">Update Failed</string>
+    <string name="student_deleted">Student Deleted</string>
+    <string name="delete_failed">Delete Failed</string>
+
+    <!-- Dashboard header -->
+    <string name="admin_page">Admin Page</string>
+    <string name="tagline">Avarmi - The campus of your dreams</string>
+
+    <!-- Theme -->
+    <string name="toggle_theme">Toggle Theme</string>
+</resources>
