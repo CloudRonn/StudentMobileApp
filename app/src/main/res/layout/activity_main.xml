@@ -14,13 +14,14 @@
         android:gravity="center_horizontal"
         android:paddingBottom="16dp">
 
+        <!-- Fixed sky blue header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Avarmi Main Campus"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:textColor="?attr/colorOnBackground"/>
+            android:textColor="#87CEEB"/> <!-- Sky blue -->
 
         <TextView
             android:layout_width="wrap_content"
@@ -101,5 +102,4 @@
         android:text="Toggle Theme"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"/>
-
 </LinearLayout>

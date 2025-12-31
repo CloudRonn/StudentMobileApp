@@ -27,7 +27,7 @@
         android:inputType="text"
         android:textColor="?attr/colorOnBackground"
         android:textColorHint="?attr/colorOnBackground"
-        android:backgroundTint="?attr/colorPrimary"
+        android:backgroundTint="@color/sky_blue"
         android:layout_marginBottom="10dp"/>
 
     <!-- Age -->
