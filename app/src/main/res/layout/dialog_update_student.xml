@@ -1,53 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorBackground">
 
-    <!-- Student Name -->
-    <EditText
-        android:id="@+id/etName"
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Student Name"
-        android:inputType="textPersonName"
-        android:textColor="?attr/colorOnBackground"
-        android:textColorHint="?attr/colorOnBackground"
-        android:backgroundTint="?attr/colorPrimary"
-        android:layout_marginBottom="10dp"/>
+        android:layout_height="wrap_content">
 
-    <!-- Course -->
-    <EditText
-        android:id="@+id/etCourse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Course"
-        android:inputType="text"
-        android:textColor="?attr/colorOnBackground"
-        android:textColorHint="?attr/colorOnBackground"
-        android:backgroundTint="@color/sky_blue"
-        android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/tvNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
 
-    <!-- Age -->
-    <EditText
-        android:id="@+id/etAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Age"
-        android:inputType="number"
-        android:textColor="?attr/colorOnBackground"
-        android:textColorHint="?attr/colorOnBackground"
-        android:backgroundTint="?attr/colorPrimary"
-        android:layout_marginBottom="16dp"/>
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter student name"
+            android:inputType="textPersonName"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginBottom="10dp"/>
 
-    <!-- Save Button -->
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="?attr/colorOnPrimary"/>
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvCourseLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Course"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/etCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter course"
+            android:inputType="text"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="@color/sky_blue"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvAgeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter age"
+            android:inputType="number"
+            android:textColor="?attr/colorOnBackground"
+            android:textColorHint="?attr/colorOnBackground"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="?attr/colorOnPrimary"/>
+    </LinearLayout>
+</ScrollView>

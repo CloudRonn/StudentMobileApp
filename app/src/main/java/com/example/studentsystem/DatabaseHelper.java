@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "StudentSystem.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 5; // Keep current version consistent
 
     // STUDENT TABLE
     public static final String TABLE_STUDENT = "students";
@@ -31,7 +31,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         String createStudentTable = "CREATE TABLE " + TABLE_STUDENT + " (" +
                 COL_ID + " TEXT PRIMARY KEY, " +
                 COL_NAME + " TEXT NOT NULL, " +
@@ -49,12 +48,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // You can add specific upgrade logic here if schema changes in the future
+        // For now, we simply drop and recreate tables (data will be lost)
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         onCreate(db);
     }
 
-    //  USER METHODS
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Prevent crash on downgrade: drop tables and recreate
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_STUDENT);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
+        onCreate(db);
+    }
+
+    // ---------------- USER METHODS ----------------
+
     public boolean registerUser(String email, String phone, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -64,7 +74,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         if (cursor.getCount() > 0) {
             cursor.close();
-            return false;
+            return false; // User already exists
         }
         cursor.close();
 
@@ -89,7 +99,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return success;
     }
 
-    //STUDENT METHODS
+    // ---------------- STUDENT METHODS ----------------
+
     public boolean insertStudent(String id, String name, String course, int age) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
